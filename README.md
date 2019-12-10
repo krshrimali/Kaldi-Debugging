@@ -47,3 +47,8 @@ terminate called after throwing an instance of 'kaldi::KaldiFatalError'
   what():  kaldi::KaldiFatalError
 utils/build_const_arpa_lm.sh: line 47: 14151 Aborted                 (core dumped) arpa-to-const-arpa --bos-symbol=$bos --eos-symbol=$eos --unk-symbol=$unk "gunzip -c $arpa_lm | utils/map_arpa_lm.pl $new_lang/words.txt|" $new_lang/G.carpa
 ```
+
+## Debugging for Kaldi ASR Project
+
+1. <img src="error-1-optimize-alpha.png"/>
+
