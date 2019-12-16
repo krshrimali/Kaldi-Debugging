@@ -55,3 +55,8 @@ utils/build_const_arpa_lm.sh: line 47: 14151 Aborted                 (core dumpe
 	<img src="images/error-asr-cmd-empty.png"/>
 3. The Step-2 doesn't solve the problem, fault: I didn't look at the run.sh file, and it uses `"$decode_cmd"`. So again doing: `export decode_cmd=run.pl`.
 	<img src="images/error-unsolved-decode_cmd.PNG"/>
+4. After Step-3, another error. This time the error is saved in a log:
+	<img src="images/kaldi-error-asr.PNG"/>
+5. In the Step-4, it says the log has details. Below is the screenshot of the log:
+	<img src="images/error-log.PNG"/>
+6. Solution: `sudo apt-get install python`. Now trying again...
