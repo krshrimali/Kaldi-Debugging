@@ -51,7 +51,7 @@ utils/build_const_arpa_lm.sh: line 47: 14151 Aborted                 (core dumpe
 ## Debugging for Kaldi ASR Project
 
 1. <img src="images/error-1-optimize-alpha.png"/>
-
 2. Running Training code for Kaldi, nothing after `--cmd`. Trying to run the code again with `export cmd=run.pl` explicitly on the shell.
-
-<img src="images/error-asr-cmd-empty.png"/>
+	<img src="images/error-asr-cmd-empty.png"/>
+3. The Step-2 doesn't solve the problem, fault: I didn't look at the run.sh file, and it uses `"$decode_cmd"`. So again doing: `export decode_cmd=run.pl`.
+	<img src="images/error-unsolved-decode_cmd.PNG"/>
