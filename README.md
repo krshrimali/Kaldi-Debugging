@@ -92,8 +92,17 @@ utils/build_const_arpa_lm.sh: line 47: 14151 Aborted                 (core dumpe
 	fstrmsymbols exp/tri2a/graph/disambig_tid.int
 	fstisstochastic exp/tri2a/graph/HCLGa.fst
 	add-self-loops --self-loop-scale=0.1 --reorder=true exp/tri2a/final.mdl exp/tri2a/graph/HCLGa.fst
-	./mfcc.sh: line 63: [: -le: unary operator expected
-	./mfcc.sh: line 79: [: -le: unary operator expected
+	./mfcc.sh: line 63:  -le: unary operator expected
+	./mfcc.sh: line 79:  -le: unary operator expected
 	./mfcc.sh: line 92: syntax error near unexpected token `fi'
 	./mfcc.sh: line 92: `fi'
-```
+	```
+8. <img src="images/error-solved.PNG"/>
+9. <img src="images/error-solved-tri2a.PNG"/>
+10. <img src="images/train_lda_mlt_sh_output.PNG"/>
+11. <img src="images/train_at-command.PNG"/>
+
+Everything done!
+
+## RESULT
+<img src="images/RESULT_output.PNG"/>
