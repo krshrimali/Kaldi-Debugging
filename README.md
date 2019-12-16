@@ -60,3 +60,40 @@ utils/build_const_arpa_lm.sh: line 47: 14151 Aborted                 (core dumpe
 5. In the Step-4, it says the log has details. Below is the screenshot of the log:
 	<img src="images/error-log.PNG"/>
 6. Solution: `sudo apt-get install python`. Now trying again...
+7. Error:
+	```
+	tree-info exp/mono0a/tree
+	tree-info exp/mono0a/tree
+	make-h-transducer --disambig-syms-out=exp/mono0a/graph_tgpr/disambig_tid.int --transition-scale=1.0 data/lang_test/tmp/ilabels_1_0 exp/mono0a/tree exp/mono0a/final.mdl
+	fsttablecompose exp/mono0a/graph_tgpr/Ha.fst data/lang_test/tmp/CLG_1_0.fst
+	fstdeterminizestar --use-log=true
+	fstrmsymbols exp/mono0a/graph_tgpr/disambig_tid.int
+	fstrmepslocal
+	fstminimizeencoded
+	fstisstochastic exp/mono0a/graph_tgpr/HCLGa.fst
+	add-self-loops --self-loop-scale=0.1 --reorder=true exp/mono0a/final.mdl exp/mono0a/graph_tgpr/HCLGa.fst
+	tree-info exp/tri1/tree
+	tree-info exp/tri1/tree
+	make-h-transducer --disambig-syms-out=exp/tri1/graph/disambig_tid.int --transition-scale=1.0 data/lang_test/tmp/ilabels_3_1 exp/tri1/tree exp/tri1/final.mdl
+	fsttablecompose exp/tri1/graph/Ha.fst data/lang_test/tmp/CLG_3_1.fst
+	fstdeterminizestar --use-log=true
+	fstrmsymbols exp/tri1/graph/disambig_tid.int
+	fstrmepslocal
+	fstminimizeencoded
+	fstisstochastic exp/tri1/graph/HCLGa.fst
+	add-self-loops --self-loop-scale=0.1 --reorder=true exp/tri1/final.mdl exp/tri1/graph/HCLGa.fst
+	tree-info exp/tri2a/tree
+	tree-info exp/tri2a/tree
+	make-h-transducer --disambig-syms-out=exp/tri2a/graph/disambig_tid.int --transition-scale=1.0 data/lang_test/tmp/ilabels_3_1 exp/tri2a/tree exp/tri2a/final.mdl
+	fstdeterminizestar --use-log=true
+	fsttablecompose exp/tri2a/graph/Ha.fst data/lang_test/tmp/CLG_3_1.fst
+	fstrmepslocal
+	fstminimizeencoded
+	fstrmsymbols exp/tri2a/graph/disambig_tid.int
+	fstisstochastic exp/tri2a/graph/HCLGa.fst
+	add-self-loops --self-loop-scale=0.1 --reorder=true exp/tri2a/final.mdl exp/tri2a/graph/HCLGa.fst
+	./mfcc.sh: line 63: [: -le: unary operator expected
+	./mfcc.sh: line 79: [: -le: unary operator expected
+	./mfcc.sh: line 92: syntax error near unexpected token `fi'
+	./mfcc.sh: line 92: `fi'
+```
